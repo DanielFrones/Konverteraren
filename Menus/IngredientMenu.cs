@@ -9,19 +9,29 @@ namespace Konverteraren.Menus
 
         public static void Menu()
         {
+            int userInput;
+            do
+            {
 
-            Console.WriteLine("Välj Kategori : ");
-            Console.WriteLine("1. Mjöl ");
-            Console.WriteLine("2. Socker ");
-            Console.WriteLine("3. Matfett ");
+                Console.Clear();
+                Console.WriteLine("Välj Kategori : ");
+                Console.WriteLine("1. Mjöl ");
+                Console.WriteLine("2. Socker ");
+                Console.WriteLine("3. Matfett ");
 
-            int choice = Convert.ToInt32(Console.ReadLine());
+                userInput = Convert.ToInt32(Console.ReadLine());
 
+                Lines.Line();
+            }
+            while (userInput == 0 || userInput > 3);
 
-            switch (choice)
+            switch (userInput)
             {
                 case 1:
-                    Console.Clear();
+                    int userInputWheat;
+                    do
+                    {
+                        Console.Clear();
                     Console.WriteLine("1. Deciliter - Bovetemjöl");
                     Console.WriteLine("2. Bovetemjöl - Deciliter");
                     Console.WriteLine("3. Deciliter - Gramhamsmjöl");
@@ -33,8 +43,10 @@ namespace Konverteraren.Menus
                     Console.WriteLine("9. Deciliter - Rågsikt");
                     Console.WriteLine("10. Rågsikt - Deciliter");
 
-                    int userInputWheat = Convert.ToInt32(Console.ReadLine());
-
+                    userInputWheat = Convert.ToInt32(Console.ReadLine());
+                        Lines.Line();
+                    }
+                    while (userInputWheat == 0 || userInputWheat > 10);
                     switch (userInputWheat)
                     {
                         case 1:
@@ -70,7 +82,10 @@ namespace Konverteraren.Menus
                     }
                     break;
                 case 2:
-
+                    int userInputSugar;
+                    do
+                    {
+                        Console.Clear();
                     Console.WriteLine("1. Deciliter - Sirap");
                     Console.WriteLine("2. Sirap - Deciliter");
                     Console.WriteLine("3. Deciliter - Honung");
@@ -82,8 +97,10 @@ namespace Konverteraren.Menus
                     Console.WriteLine("9. Deciliter - Florsocker");
                     Console.WriteLine("10. Florsocker - Deciliter");
 
-                    int userInputSugar = Convert.ToInt32(Console.ReadLine());
-
+                    userInputSugar = Convert.ToInt32(Console.ReadLine());
+                        Lines.Line();
+                    }
+                    while (userInputSugar == 0 || userInputSugar > 10);
                     switch (userInputSugar)
                     {
                         case 1:
@@ -123,7 +140,10 @@ namespace Konverteraren.Menus
                     break;
 
                 case 3:
-
+                    int userInputButter;
+                    do
+                    {
+                        Console.Clear();
                     Console.WriteLine("1. Deciliter - Fast Smör");
                     Console.WriteLine("2. Fast Smör - Deciliter");
                     Console.WriteLine("3. Deciliter - Kokosfett");
@@ -134,8 +154,11 @@ namespace Konverteraren.Menus
                     Console.WriteLine("8. Olja - Deciliter");
                     Console.WriteLine("9. Deciliter - Ister");
                     Console.WriteLine("10. Ister - Deciliter");
-
-                    int userInputButter = Convert.ToInt32(Console.ReadLine());
+                        
+                        userInputButter = Convert.ToInt32(Console.ReadLine());
+                        Lines.Line();
+                    }
+                    while (userInputButter == 0 || userInputButter > 10);
 
                     switch (userInputButter)
                     {

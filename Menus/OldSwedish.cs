@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Konverteraren.Menus;
-using Konverteraren.Converters;
 
 namespace Konverteraren.Menus
 {
@@ -12,13 +6,21 @@ namespace Konverteraren.Menus
     {
         public static void OldSwedishMenu()
         {
-            Console.WriteLine("Välj vad du vill konvertera: ");
-            Console.WriteLine("1. Volym");
-            Console.WriteLine("2. Vikt");
-            Console.WriteLine("3. Kvantitet");
+            int userInput;
+            do
+            {
 
-            int userInput = Convert.ToInt32(Console.ReadLine());
 
+                Console.Clear();
+                Console.WriteLine("Välj vad du vill konvertera: ");
+                Console.WriteLine("1. Volym");
+                Console.WriteLine("2. Vikt");
+                Console.WriteLine("3. Kvantitet");
+
+                userInput = Convert.ToInt32(Console.ReadLine());
+                Lines.Line();
+            }
+            while (userInput == 0 || userInput > 3);
             switch (userInput)
             {
                 case 1:
@@ -36,24 +38,30 @@ namespace Konverteraren.Menus
         }
         public static void OldSwedishVolumeMenu()
         {
-            Console.WriteLine("Välj Konverterare: ");
-            Console.WriteLine("1. Liter - Spann");
-            Console.WriteLine("2. Spann - Liter");
-            Console.WriteLine("3. Liter - Kappe");
-            Console.WriteLine("4. Kappe - Liter");
-            Console.WriteLine("5. Liter - Kanna");
-            Console.WriteLine("6. Kanna - Liter");
-            Console.WriteLine("7. Deciliter - Kvarter");
-            Console.WriteLine("8. Kvarter - Deciliter");
-            Console.WriteLine("9. Deciliter - Tekopp");
-            Console.WriteLine("10. Tekopp - Deciliter");
-            Console.WriteLine("11. Deciliter - Kaffekopp");
-            Console.WriteLine("12. Kaffekopp - Deciliter");
-            Console.WriteLine("13. Deciliter - Jungfru");
-            Console.WriteLine("14. Jungfru . Deciliter");
+            int userInput;
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("Välj Konverterare: ");
+                Console.WriteLine("1. Liter - Spann");
+                Console.WriteLine("2. Spann - Liter");
+                Console.WriteLine("3. Liter - Kappe");
+                Console.WriteLine("4. Kappe - Liter");
+                Console.WriteLine("5. Liter - Kanna");
+                Console.WriteLine("6. Kanna - Liter");
+                Console.WriteLine("7. Deciliter - Kvarter");
+                Console.WriteLine("8. Kvarter - Deciliter");
+                Console.WriteLine("9. Deciliter - Tekopp");
+                Console.WriteLine("10. Tekopp - Deciliter");
+                Console.WriteLine("11. Deciliter - Kaffekopp");
+                Console.WriteLine("12. Kaffekopp - Deciliter");
+                Console.WriteLine("13. Deciliter - Jungfru");
+                Console.WriteLine("14. Jungfru . Deciliter");
 
-            int userInput = Convert.ToInt32(Console.ReadLine());
-
+                userInput = Convert.ToInt32(Console.ReadLine());
+                Lines.Line();
+            }
+            while (userInput == 0 || userInput > 14);
             switch (userInput)
             {
                 case 1:
@@ -104,19 +112,25 @@ namespace Konverteraren.Menus
         }
         public static void OldSwedishWeightMenu()
         {
-            Console.WriteLine("Välj konverterare: ");
-            Console.WriteLine("1. Gram - Skålpund");
-            Console.WriteLine("2. Skålpund - Gram");
-            Console.WriteLine("3. Gram - Lod");
-            Console.WriteLine("4. Lod - Gram");
-            Console.WriteLine("5. Gram - Ort");
-            Console.WriteLine("6. Ort - Gram");
-            Console.WriteLine("7. Gram - Kvintin");
-            Console.WriteLine("8. Kvintin - Gram");
+            int userInput;
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("Välj konverterare: ");
+                Console.WriteLine("1. Gram - Skålpund");
+                Console.WriteLine("2. Skålpund - Gram");
+                Console.WriteLine("3. Gram - Lod");
+                Console.WriteLine("4. Lod - Gram");
+                Console.WriteLine("5. Gram - Ort");
+                Console.WriteLine("6. Ort - Gram");
+                Console.WriteLine("7. Gram - Kvintin");
+                Console.WriteLine("8. Kvintin - Gram");
 
-            int userInput = Convert.ToInt32(Console.ReadLine());
+                userInput = Convert.ToInt32(Console.ReadLine());
 
-
+                Lines.Line();
+            }
+            while (userInput == 0 || userInput > 8);
             switch (userInput)
             {
                 case 1:
@@ -149,21 +163,31 @@ namespace Konverteraren.Menus
         }
         public static void OldSwedishQuantityMenu()
         {
-            Console.WriteLine("Välj konverterare: ");
-            Console.WriteLine("1. Styck - Dussin");
-            Console.WriteLine("2. Dussin - Styck");
-            Console.WriteLine("3. Styck - Tolft");
-            Console.WriteLine("4. Tolft - Styck");
-            Console.WriteLine("5. Styck - Tjog");
-            Console.WriteLine("6. Tjog - Styck");
-            Console.WriteLine("7. Styck - Skock");
-            Console.WriteLine("8. Skock - Styck");
-            Console.WriteLine("9. Dussin - Gross");
-            Console.WriteLine("10. Gross - Dussin");
 
-            int userInput = Convert.ToInt32(Console.ReadLine());
+            int userInput;
+
+            do
+            {
 
 
+                Console.Clear();
+                Console.WriteLine("Välj konverterare: ");
+                Console.WriteLine("1. Styck - Dussin");
+                Console.WriteLine("2. Dussin - Styck");
+                Console.WriteLine("3. Styck - Tolft");
+                Console.WriteLine("4. Tolft - Styck");
+                Console.WriteLine("5. Styck - Tjog");
+                Console.WriteLine("6. Tjog - Styck");
+                Console.WriteLine("7. Styck - Skock");
+                Console.WriteLine("8. Skock - Styck");
+                Console.WriteLine("9. Dussin - Gross");
+                Console.WriteLine("10. Gross - Dussin");
+
+                userInput = Convert.ToInt32(Console.ReadLine());
+
+                Lines.Line();
+            }
+            while (userInput == 0 || userInput > 10);
             switch (userInput)
             {
                 case 1:

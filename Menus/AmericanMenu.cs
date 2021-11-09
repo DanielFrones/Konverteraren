@@ -1,7 +1,5 @@
 ﻿using Konverteraren.Converters;
 using System;
-using Konverteraren.Converters;
-using Konverteraren.Menus;
 
 namespace Konverteraren.Menus
 {
@@ -11,31 +9,36 @@ namespace Konverteraren.Menus
         {
 
 
+            int userInput;
+            do
+            {
+
+
+                Console.Clear();
+                Console.WriteLine("Välj Konverterare: ");
+                Console.WriteLine("1. Gallons - Liter");
+                Console.WriteLine("2. Liter - Gallons");
+                Console.WriteLine("3. Quart - Deciliter");
+                Console.WriteLine("4. Deciliter - Quart");
+                Console.WriteLine("5. Pint - Deciliter");
+                Console.WriteLine("6. Deciliter - Pint");
+                Console.WriteLine("7. Cup - Deciliter");
+                Console.WriteLine("8. Deciliter - Cup");
+                Console.WriteLine("9. Fluid Ounce - Milliliter");
+                Console.WriteLine("10. Milliliter - Fluid Ounce");
+                Console.WriteLine("11. Ounce - Gram");
+                Console.WriteLine("12. Gram - Ounce");
+                Console.WriteLine("13. Pound - Kilo");
+                Console.WriteLine("14. Kilo - Pound");
 
 
 
-            Console.WriteLine("Välj Konverterare: ");
-            Console.WriteLine("1. Gallons - Liter");
-            Console.WriteLine("2. Liter - Gallons");
-            Console.WriteLine("3. Quart - Deciliter");
-            Console.WriteLine("4. Deciliter - Quart");
-            Console.WriteLine("5. Pint - Deciliter");
-            Console.WriteLine("6. Deciliter - Pint");
-            Console.WriteLine("7. Cup - Deciliter");
-            Console.WriteLine("8. Deciliter - Cup");
-            Console.WriteLine("9. Fluid Ounce - Milliliter");
-            Console.WriteLine("10. Milliliter - Fluid Ounce");
-            Console.WriteLine("11. Ounce - Gram");
-            Console.WriteLine("12. Gram - Ounce");
-            Console.WriteLine("13. Pound - Kilo");
-            Console.WriteLine("14. Kilo - Pound");
 
 
-
-
-
-            int userInput = Convert.ToInt32(Console.ReadLine());
-
+                userInput = Convert.ToInt32(Console.ReadLine());
+                Lines.Line();
+            }
+            while (userInput == 0 || userInput > 14);
 
 
 
@@ -125,7 +128,9 @@ namespace Konverteraren.Menus
                     American.KiloToPound();
                     break;
 
-
+                default:
+                    Console.WriteLine("test");
+                    break;
 
             }
         }

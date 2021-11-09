@@ -7,26 +7,33 @@ namespace Konverteraren.Menus
     {
         public static void Menu()
         {
-
-            Console.WriteLine("Välj Konverterare genom att trycka på ett nummer: ");
-            Console.WriteLine("1. Gallon - Liter");
-            Console.WriteLine("2. Liter - Gallon");
-            Console.WriteLine("3. Pint - Deciliter");
-            Console.WriteLine("4. Deciliter - Pint");
-            Console.WriteLine("5. Cup - Deciliter");
-            Console.WriteLine("6. Deciliter - Cup");
-            Console.WriteLine("7. UK fluid ounce - Milliliter");
-            Console.WriteLine("8. Milliliter - UK fluid ounce");
-            Console.WriteLine("9. Tablespoon - Milliliter");
-            Console.WriteLine("10. Milliliter - Tablespoon");
-            Console.WriteLine("11. Teaspoon - Milliliter");
-            Console.WriteLine("12. Milliliter - Teaspoon");
-            Console.WriteLine("13. Pound - Kilo");
-            Console.WriteLine("14. Kilo - Pound");
+            int userInput;
+            do
+            {
 
 
-            int userInput = Convert.ToInt32(Console.ReadLine());
+                Console.Clear();
+                Console.WriteLine("Välj Konverterare genom att trycka på ett nummer: ");
+                Console.WriteLine("1. Gallon - Liter");
+                Console.WriteLine("2. Liter - Gallon");
+                Console.WriteLine("3. Pint - Deciliter");
+                Console.WriteLine("4. Deciliter - Pint");
+                Console.WriteLine("5. Cup - Deciliter");
+                Console.WriteLine("6. Deciliter - Cup");
+                Console.WriteLine("7. UK fluid ounce - Milliliter");
+                Console.WriteLine("8. Milliliter - UK fluid ounce");
+                Console.WriteLine("9. Tablespoon - Milliliter");
+                Console.WriteLine("10. Milliliter - Tablespoon");
+                Console.WriteLine("11. Teaspoon - Milliliter");
+                Console.WriteLine("12. Milliliter - Teaspoon");
+                Console.WriteLine("13. Pound - Kilo");
+                Console.WriteLine("14. Kilo - Pound");
 
+
+                userInput = Convert.ToInt32(Console.ReadLine());
+
+            }
+            while (userInput == 0 || userInput > 14);
 
             switch (userInput)
             {
