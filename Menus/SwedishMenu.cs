@@ -11,29 +11,36 @@ namespace Konverteraren.Menus
     {
         public static void Menu()
         {
-            Console.WriteLine("Välj Konverterare: ");
-            Console.WriteLine("1. Liter - Milliliter");
-            Console.WriteLine("2. Milliliter - Liter");
-            Console.WriteLine("3. Deciliter - Milliliter");
-            Console.WriteLine("4. Milliliter - Deciliter");
-            Console.WriteLine("5. Centiliter - Milliliter");
-            Console.WriteLine("6. Milliliter - Centiliter");
-            Console.WriteLine("7. Matsked - Milliliter");
-            Console.WriteLine("8. Milliliter - Matsked");
-            Console.WriteLine("9. Kryddmått - Milliliter");
-            Console.WriteLine("10. Milliliter - Kryddmått");
-            Console.WriteLine("11. Kilo - Gram");
-            Console.WriteLine("12. Gram - Kilo");
-            Console.WriteLine("13. Hekto - Gram");
-            Console.WriteLine("14. Gram - Hekto");
-            Console.WriteLine("15. Milligram - Gram");
-            Console.WriteLine("16. Gram - Milligram");
+           
+            int userInput;
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("Välj Enheter att konvertera: ");
+                Console.WriteLine("1. Liter - Milliliter");
+                Console.WriteLine("2. Milliliter - Liter");
+                Console.WriteLine("3. Deciliter - Milliliter");
+                Console.WriteLine("4. Milliliter - Deciliter");
+                Console.WriteLine("5. Centiliter - Milliliter");
+                Console.WriteLine("6. Milliliter - Centiliter");
+                Console.WriteLine("7. Matsked - Milliliter");
+                Console.WriteLine("8. Milliliter - Matsked");
+                Console.WriteLine("9. Kryddmått - Milliliter");
+                Console.WriteLine("10. Milliliter - Kryddmått");
+                Console.WriteLine("11. Kilo - Gram");
+                Console.WriteLine("12. Gram - Kilo");
+                Console.WriteLine("13. Hekto - Gram");
+                Console.WriteLine("14. Gram - Hekto");
+                Console.WriteLine("15. Milligram - Gram");
+                Console.WriteLine("16. Gram - Milligram");
+                userInput = Convert.ToInt32(Console.ReadLine());
+                Lines.Line();
+            }
+            while (userInput == 0 || userInput > 16);
+            
 
-
-            int userInput = Convert.ToInt32(Console.ReadLine());
-
-
-
+            
+             
             switch (userInput)
             {
                 case 1:
@@ -84,7 +91,7 @@ namespace Konverteraren.Menus
                 case 16:
                     Swedish.GramToMilligram();
                     break;
-
+                
             }
 
         }
