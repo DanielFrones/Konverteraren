@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Konverteraren.Converters;
 
 
 namespace Konverteraren.Menus
@@ -23,42 +18,42 @@ namespace Konverteraren.Menus
                 Console.WriteLine("5. Gamla svenska mått");
 
 
-                
-                
-                 int userInput = Convert.ToInt32(Console.ReadLine());
+
+
+                int userInput = Convert.ToInt32(Console.ReadLine());
 
 
 
-                 switch (userInput)
-                 {
-                        case 1:
-                            Lines.Line();
-                            SwedishMenu.Menu();
-                            break;
-                        case 2:
-                            Lines.Line();
-                            Console.WriteLine("BrittishMenu.Menu();");
-                            //BrittishMenu.Menu();
-                            break;
-                        case 3:
-                            Lines.Line();
-                            Console.WriteLine("AmericanMenu.Menu();");
-                          //AmericanMenu.Menu();
-                            break;
-                        case 4:
-                            Lines.Line();
-                            Console.WriteLine("1DecInGram.Menu();");
-                            //1DecInGram.Menu();
-                            break;
-                        case 5:
-                            Lines.Line();
-                            Console.WriteLine("OldSwedishMeassurements.Menu();");
-                            //OldSwedishMeassurements.Menu();
-                            break;
-                        default: 
-                            throw new ArgumentOutOfRangeException("Unknown value");
+                switch (userInput)
+                {
+                    case 1:
+                        Lines.Line();
+                        SwedishMenu.Menu();
+                        break;
+                    case 2:
+                        Lines.Line();
+                        BrittishMenu.Menu();
+                        
+                        break;
+                    case 3:
+                        Lines.Line();
+                        AmericanMenu.AmericanMenuMethod();
+                        
+                        break;
+                    case 4:
+                        Lines.Line();
+                        IngridientMenu.Menu();
+                        
+                        break;
+                    case 5:
+                        Lines.Line();
+                        OldSwedish.OldSwedishMenu();
+                        
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException("Unknown value");
                 }
-                
+
 
 
 

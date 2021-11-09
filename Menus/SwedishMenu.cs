@@ -91,6 +91,10 @@ namespace Konverteraren.Menus
                 case 16:
                     Swedish.GramToMilligram();
                     break;
+                default:
+                    Console.WriteLine("Fel inmatning, tryck valfri tangent för att börja om..");
+                    Console.ReadKey();
+                    break;
                 
             }
 

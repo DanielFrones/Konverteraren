@@ -15,7 +15,7 @@ namespace Konverteraren.Menus
             Console.WriteLine("Hej och välkommen till Konverteraren(TRADEMARK!!!), här tillhandahåller vi varenda konvertering under solen!");
             Console.WriteLine("Du kommer få välja typ av enhetsområde, och i steget efter vilka enheter du vill konvertera.");
 
-            Console.WriteLine("Tryck på valrfri knapp för att fortsätta:");
+            Console.WriteLine("Tryck på valfri knapp för att fortsätta:");
 
             Console.ReadKey();
           
