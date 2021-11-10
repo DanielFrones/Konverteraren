@@ -12,10 +12,10 @@ namespace Konverteraren.Menus
         public static void Menu()
         {
            
-            int userInput;
+            int userInput= 0;
             do
             {
-                Console.Clear();
+                
                 Console.WriteLine("Välj Enheter att konvertera: ");
                 Console.WriteLine("1. Liter - Milliliter");
                 Console.WriteLine("2. Milliliter - Liter");
@@ -33,7 +33,17 @@ namespace Konverteraren.Menus
                 Console.WriteLine("14. Gram - Hekto");
                 Console.WriteLine("15. Milligram - Gram");
                 Console.WriteLine("16. Gram - Milligram");
-                userInput = Convert.ToInt32(Console.ReadLine());
+
+                try
+                {
+                    userInput = Convert.ToInt32(Console.ReadLine());
+                }
+                catch(Exception e)
+                {
+                    Console.Clear();
+                    Console.WriteLine(e.Message);
+                    
+                }
                 Lines.Line();
             }
             while (userInput == 0 || userInput > 16);
